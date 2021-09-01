@@ -1,0 +1,18 @@
+
+    Class that generates new instances of contacts (This is a docstring)
+    Docstrings are strings that occur as the first statement of a named block
+    They allow us to document what the code block does
+
+
+    #__init__ method helps us define properties for our objects
+    '''
+    first_name: New contact first name.
+    last_name : New contact last name.
+    phone_number: New contact phone number.
+        email : New contact email address.
+    '''
+
+    Instance Variables: Variables that are unique to each new instance of the class
+    ie first_name, last_name, phone_number and email.
+
+    Class Variables: Variables that belong to the entire class and can be accessed by all instances of the class
