@@ -16,3 +16,11 @@
     ie first_name, last_name, phone_number and email.
 
     Class Variables: Variables that belong to the entire class and can be accessed by all instances of the class
+
+    Test Class: Class that defines test cases for the contact class behaviours.
+    unittest.TestCase: TestCase class that helps in creating test cases
+
+    Subclass: Normal class but in addition to its own variables and method it also inherits
+    methods and variables from another class.
+
+    setUp() method allows us to define instructionsthat will be executed before each test method
