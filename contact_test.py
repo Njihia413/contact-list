@@ -1,5 +1,6 @@
 import unittest #Importing the unittest module
 from contact import Contact #Importing the contact class
+#import pyperclip #Pyperclip will allow us to copy and paste items to our clipboard
 
 class TestContact(unittest.TestCase):
     def setUp(self):
@@ -42,7 +43,26 @@ class TestContact(unittest.TestCase):
         test_contact.save_contact()
         found_contact = Contact.find_by_number("0711223344")
         self.assertEqual(found_contact.email,test_contact.email)
-        
+
+    #Sixth test to check if a contact object exists
+    def test_contact_exists(self):
+        self.new_contact.save_contact()
+        test_contact = Contact("Test","user","0711223344","test@user.com") #new contact
+        test_contact.save_contact()
+        contact_exists = Contact.contact_exist("0711223344")
+        self.assertTrue(contact_exists)
+
+    #Seventh test to display all contacts
+    def test_display_all_contacts(self):
+        self.assertEqual(Contact.display_contacts(),Contact.contact_list)
+
+    #Eighth test to allow us to copy items to the clipboard
+    '''
+     def test_copy_email(self):
+        self.new_contact.save_contact()
+        Contact.copy_email("0712345678")
+        self.assertEqual(self.new_contact.email,pyperclip.paste()) 
+    '''     
 
 if __name__ == '__main__':
     unittest.main()        

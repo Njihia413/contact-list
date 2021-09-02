@@ -1,3 +1,4 @@
+#import pyperclip
 class Contact:
     contact_list = [] #Empty contact list
 
@@ -12,7 +13,25 @@ class Contact:
 
         for contact in cls.contact_list:
             if contact.phone_number == number:
-                return contact       
+                return contact
+
+    @classmethod
+    def contact_exist(cls,number):
+        for contact in cls.contact_list:
+            if contact.phone_number == number:
+                return True
+        return False    
+
+    @classmethod
+    def display_contacts(cls):
+        return cls.contact_list
+    
+    '''
+    @classmethod
+    def copy_email(cls,number):
+        contact_found = Contact.find_by_number(number)
+        pyperclip.copy(contact_found.email)
+    '''  
 
     def __init__(self,first_name,last_name,phone_number,email):
         self.first_name = first_name
