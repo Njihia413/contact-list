@@ -11,15 +11,22 @@
 # Setup Requirements
 * Git
 * Github
-* Python https://python.org
+* Python3.8 https://python.org
+* Pip
 # Setup Installation
 * Clone this repository to your local directory from your terminal
 ```
 git clone https://github.com/Njihia413/contact-list.git
 ```
+```
+cd contact-list
+```
 * Open the project using a suitable code editor: code.visualstudio.com
 * Open the terminal of your code editor
 * To interact with the app, run the file (run.py):
+```
+chmod +x run.py
+```
 ```
 ./run.py
 ```
